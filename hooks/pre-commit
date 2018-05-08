@@ -1,8 +1,0 @@
-#!/bin/sh -eu
-
-BRANCH="$(git rev-parse --abbrev-ref HEAD)"
-
-if [ "${R1_WP}" != "${BRANCH}" ]; then
-	echo "R1 error: you are trying to commit/push the foreign branch '${BRANCH}' while R1_WP='${R1_WP}' is expected"
-	exit 1
-fi
